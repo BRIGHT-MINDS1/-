@@ -37,14 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const dropLink = dropdown.querySelector('.nav-link');
 
         dropLink.addEventListener('click', function (e) {
-            if (window.matchMedia('(hover: none)').matches) {
-                e.preventDefault();
-                const isOpen = dropdown.classList.contains('open');
-                if (!isOpen) {
-                    e.preventDefault();
-                    dropdown.classList.add('open');
-                }
-            }
+            e.preventDefault();
+            dropdown.classList.toggle('open');
         });
 
         document.addEventListener('click', function (e) {
