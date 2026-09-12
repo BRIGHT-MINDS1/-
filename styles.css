@@ -330,6 +330,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .main-content {
+        padding-top: 150px;
+    }
+
     .navbar {
         padding: 12px 15px;
     }
@@ -343,6 +347,13 @@ body {
     .nav-right,
     .nav-left {
         gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
+        padding: 6px 10px;
     }
 
     .nav-center {
@@ -354,11 +365,39 @@ body {
         max-width: 100%;
     }
 
+    .dropdown-menu {
+        position: absolute;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .logo-section {
+        padding: 40px 20px 20px;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
     .cards-container {
         grid-template-columns: 1fr;
     }
 
     .section-title {
+        font-size: 2rem;
+    }
+
+    .empty-page {
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .page-title {
         font-size: 2rem;
     }
 }
