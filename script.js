@@ -31,4 +31,26 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+
+    const dropdown = document.querySelector('.dropdown');
+    if (dropdown) {
+        const dropLink = dropdown.querySelector('.nav-link');
+
+        dropLink.addEventListener('click', function (e) {
+            if (window.matchMedia('(hover: none)').matches) {
+                e.preventDefault();
+                const isOpen = dropdown.classList.contains('open');
+                if (!isOpen) {
+                    e.preventDefault();
+                    dropdown.classList.add('open');
+                }
+            }
+        });
+
+        document.addEventListener('click', function (e) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+    }
 });
